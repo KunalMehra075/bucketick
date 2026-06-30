@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bucketick — Stop postponing your dreams</title>
+    <meta
+      name="description"
+      content="Bucketick turns private checklists into living stories. Collect dreams, chase goals together, preserve memories, and inspire a community that actually shows up."
+    />
+    <meta name="theme-color" content="#ffbb00" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Bucketick" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bucketick — Stop postponing your dreams" />
+    <meta
+      property="og:description"
+      content="Goals become journeys. Journeys become memories. Memories inspire others. Your life, finally worth scrolling back through."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-banner.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bucketick — Stop postponing your dreams" />
+    <meta
+      name="twitter:description"
+      content="Goals become journeys. Journeys become memories. Memories inspire others. Your life, finally worth scrolling back through."
+    />
+    <meta name="twitter:image" content="/og-banner.png" />
+
+    <!-- Fonts: preconnect + display swap to avoid layout shift -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800;900&display=swap"
+    />
+
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body>
+    <!-- ============================ NAV ============================ -->
+    <header class="nav" data-nav>
+      <div class="nav__inner">
+        <a class="nav__brand" href="#top" aria-label="Bucketick home">
+          <!-- <img class="nav__logo-img" src="/bucketick-logo.png" alt="" width="40" height="40" decoding="async" /> -->
+          <img class="nav__wordmark" src="/bucketick-wordmark.png" alt="Bucketick" height="22" decoding="async" />
+        </a>
+
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#features">Features</a>
+          <a href="#how">How it works</a>
+          <a href="#community">Community</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="nav__actions">
+          <a class="btn btn--ghost" href="#download">Log in</a>
+          <a class="btn btn--primary" href="#download">Get the app</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ============================ HERO ============================ -->
+      <section class="hero section" data-section="hero">
+        <!-- bg blobs -->
+        <div class="hero__bg" aria-hidden="true">
+          <span class="blob blob--pink" data-float="2"></span>
+          <span class="blob blob--yellow" data-float="1"></span>
+        </div>
+
+        <!-- LEFT 35%: labeled bucket list, hyped with sparkles all around -->
+        <div class="hero__left">
+          <!-- Twinkling sparkles scattered around the whole bucket list -->
+          <span class="spark" aria-hidden="true" style="top: 7%; left: 5%; width: 26px; height: 26px; color: var(--bt-pink); --dur: 2.8s; --delay: 0s;"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 1C17 12 20 15 31 16 20 17 17 20 16 31 15 20 12 17 1 16 12 15 15 12 16 1Z"/></svg></span>
+          <span class="spark" aria-hidden="true" style="top: 11%; left: 58%; width: 15px; height: 15px; color: var(--bt-blue); --dur: 3.4s; --delay: -1.2s;"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 1C17 12 20 15 31 16 20 17 17 20 16 31 15 20 12 17 1 16 12 15 15 12 16 1Z"/></svg></span>
+          <span class="spark" aria-hidden="true" style="top: 20%; left: 84%; width: 20px; height: 20px; color: var(--bt-yellow); --dur: 2.5s; --delay: -0.7s;"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 1C17 12 20 15 31 16 20 17 17 20 16 31 15 20 12 17 1 16 12 15 15 12 16 1Z"/></svg></span>
+          <span class="spark" aria-hidden="true" style="top: 31%; left: 30%; width: 12px; height: 12px; color: var(--bt-purple); --dur: 2.4s; --delay: -1.6s;"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 1C17 12 20 15 31 16 20 17 17 20 16 31 15 20 12 17 1 16 12 15 15 12 16 1Z"/></svg></span>
+          <span class="spark" aria-hidden="true" style="top: 46%; left: 1%; width: 18px; height: 18px; color: var(--bt-orange); --dur: 3.1s; --delay: -2s;"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 1C17 12 20 15 31 16 20 17 17 20 16 31 15 20 12 17 1 16 12 15 15 12 16 1Z"/></svg></span>
+          <span class="spark" aria-hidden="true" style="top: 52%; left: 90%; width: 22px; height: 22px; color: var(--bt-pink); --dur: 2.9s; --delay: -0.5s;"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 1C17 12 20 15 31 16 20 17 17 20 16 31 15 20 12 17 1 16 12 15 15 12 16 1Z"/></svg></span>
+          <span class="spark" aria-hidden="true" style="top: 71%; left: 6%; width: 16px; height: 16px; color: var(--bt-blue); --dur: 3.3s; --delay: -2.2s;"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 1C17 12 20 15 31 16 20 17 17 20 16 31 15 20 12 17 1 16 12 15 15 12 16 1Z"/></svg></span>
+          <span class="spark" aria-hidden="true" style="bottom: 8%; left: 46%; width: 24px; height: 24px; color: var(--bt-yellow); --dur: 2.7s; --delay: -1s;"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 1C17 12 20 15 31 16 20 17 17 20 16 31 15 20 12 17 1 16 12 15 15 12 16 1Z"/></svg></span>
+          <span class="spark" aria-hidden="true" style="bottom: 13%; left: 82%; width: 16px; height: 16px; color: var(--bt-orange); --dur: 3s; --delay: -0.3s;"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 1C17 12 20 15 31 16 20 17 17 20 16 31 15 20 12 17 1 16 12 15 15 12 16 1Z"/></svg></span>
+
+          <div class="hero__list-label">
+            <span class="list-label__text">Your Bucket List</span>
+          </div>
+
+          <div class="hero__list" aria-hidden="true">
+            <div class="bl-item" style="--c: var(--bt-pink)">
+              <span class="bl-item__rank">1</span>
+              <div class="bl-item__body">
+                <span class="bl-item__title">skydive in dubai</span>
+                <span class="bl-item__meta">priority one. no excuses.</span>
+                <span class="bl-item__deadline">this year</span>
+              </div>
+              <div class="bl-item__cover">
+                <img src="https://images.unsplash.com/photo-1521673252667-e05da380b252?w=160&h=160&q=85&fm=webp&fit=crop&crop=entropy" alt="" width="58" height="58" loading="eager" decoding="async" />
+              </div>
+            </div>
+
+            <div class="bl-item" style="--c: var(--bt-blue)">
+              <span class="bl-item__rank">2</span>
+              <div class="bl-item__body">
+                <span class="bl-item__title">learn to surf</span>
+                <span class="bl-item__meta">this summer, ideally upright.</span>
+                <span class="bl-item__deadline">august</span>
+              </div>
+              <div class="bl-item__cover">
+                <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=160&h=160&q=85&fm=webp&fit=crop&crop=entropy" alt="" width="58" height="58" loading="eager" decoding="async" />
+              </div>
+            </div>
+
+            <div class="bl-item" style="--c: var(--bt-yellow); --num: var(--bt-orange)">
+              <span class="bl-item__rank">3</span>
+              <div class="bl-item__body">
+                <span class="bl-item__title">roadtrip with friends</span>
+                <span class="bl-item__meta">no plan, full tank.</span>
+                <span class="bl-item__deadline">someday</span>
+              </div>
+              <div class="bl-item__cover">
+                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=160&h=160&q=85&fm=webp&fit=crop&crop=entropy" alt="" width="58" height="58" loading="eager" decoding="async" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider: two tall color bars at the 35% boundary -->
+        <div class="hero__divider" aria-hidden="true">
+          <span class="v-bar v-bar--red"></span>
+          <span class="v-bar v-bar--yellow"></span>
+        </div>
+
+        <!-- RIGHT 65%: headline bottom-aligned -->
+        <div class="hero__right">
+          <!-- Paper plane + curvy looping dotted flight path SVG overlay -->
+          <div class="hero__plane-path" aria-hidden="true">
+            <svg viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+              <!-- One continuous dotted line that loops over itself, then flies up -->
+              <path
+                d="M 500 905
+                   C 620 825 700 710 765 590
+                   C 800 495 750 435 680 450
+                   C 615 464 605 545 675 570
+                   C 755 598 820 540 820 465
+                   C 822 380 788 228 866 162"
+                stroke="#18181b"
+                stroke-width="2.6"
+                stroke-dasharray="9 11"
+                stroke-linecap="round"
+                opacity="0.4"
+              />
+              <!-- Yellow paper plane at the path end (above "a bucket list for") -->
+              <g transform="translate(828, 146) rotate(-40) scale(1.7)">
+                <path d="M0 0 L60 22 L22 24 Z" fill="#ffd23f" stroke="#18181b" stroke-width="2.2" stroke-linejoin="round"/>
+                <path d="M0 44 L60 22 L22 24 Z" fill="#e6a200" stroke="#18181b" stroke-width="2.2" stroke-linejoin="round"/>
+                <path d="M0 0 L22 24 L0 44" fill="none" stroke="#18181b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+
+          <div class="hero__content">
+            <h1 class="hero__title">
+              <span class="hero__line" data-hero-line>a bucket list for</span>
+              <span class="hero__rotator" data-hero-line>
+                <span class="hero__rotator-inner" data-rotator-inner>
+                  <span class="hero__word">your partner</span>
+                  <span class="hero__word">your friends</span>
+                  <span class="hero__word">you</span>
+                </span>
+              </span>
+              <span class="hero__line" data-hero-line>to achieve them.</span>
+            </h1>
+
+            <p class="hero__sub" data-reveal>
+              Dreams are better chased out loud, together. Bucketick turns "we should totally do
+              that" into an actual plan, then keeps the memory once you pull it off.
+            </p>
+
+            <div class="hero__cta" data-reveal>
+              <a class="btn btn--sticker-pink" href="#download">Start your first list</a>
+              <a class="btn btn--sticker-ghost" href="#how">See how it works</a>
+            </div>
+
+            <div class="hero__proof" data-reveal>
+              <div class="avatar-stack" aria-hidden="true">
+                <img class="avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="" width="40" height="40" loading="lazy" decoding="async" />
+                <img class="avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="" width="40" height="40" loading="lazy" decoding="async" />
+                <img class="avatar" src="https://randomuser.me/api/portraits/women/68.jpg" alt="" width="40" height="40" loading="lazy" decoding="async" />
+                <img class="avatar" src="https://randomuser.me/api/portraits/men/75.jpg" alt="" width="40" height="40" loading="lazy" decoding="async" />
+              </div>
+              <p>Joined by <strong>120,000+</strong> dreamers who got tired of waiting.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ FEATURES ============================ -->
+      <section id="features" class="section features" data-section="features">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span> Why it sticks</p>
+            <h2 class="section-title" data-reveal>
+              Everything a checklist forgot to be
+            </h2>
+            <p class="section-lead" data-reveal>
+              Most goal apps are glorified to-do lists that guilt you. Bucketick is built to be
+              opened on a good day, not just a productive one.
+            </p>
+          </header>
+
+          <div class="feature-grid">
+            <article class="feature-card" data-reveal data-tilt style="--accent: var(--bt-pink)">
+              <span class="feature-card__icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 15 8.5 22 9.3l-5 4.6L18.5 21 12 17.4 5.5 21 7 13.9l-5-4.6L9 8.5 12 2Z"/></svg>
+              </span>
+              <h3>Dreams, not tasks</h3>
+              <p>Add a goal in seconds. Give it a photo, a why, a someday-date. It looks like a wish, not homework.</p>
+            </article>
+
+            <article class="feature-card" data-reveal data-tilt style="--accent: var(--bt-blue)">
+              <span class="feature-card__icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+              <h3>Better together</h3>
+              <p>Couples, families, friend groups, that one ambitious team. Share a list and chase it as a crew.</p>
+            </article>
+
+            <article class="feature-card" data-reveal data-tilt style="--accent: var(--bt-orange)">
+              <span class="feature-card__icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+              </span>
+              <h3>Memories that stay</h3>
+              <p>Finished a goal? It becomes a memory with photos and dates, not a line you cross out and lose.</p>
+            </article>
+
+            <article class="feature-card" data-reveal data-tilt style="--accent: var(--bt-purple)">
+              <span class="feature-card__icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+              </span>
+              <h3>Endless inspiration</h3>
+              <p>Browse public lists from real people. Steal their ideas shamelessly. That is the whole point.</p>
+            </article>
+
+            <article class="feature-card" data-reveal data-tilt style="--accent: var(--bt-yellow)">
+              <span class="feature-card__icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18a3 3 0 0 1-3-3v-2a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a3 3 0 0 1-3 3"/><path d="M8 22h8v-4H8z"/></svg>
+              </span>
+              <h3>Achievements worth it</h3>
+              <p>Real milestones, collectible badges, and a little confetti. Earned, never handed out for logging in.</p>
+            </article>
+
+            <article class="feature-card" data-reveal data-tilt style="--accent: var(--bt-pink)">
+              <span class="feature-card__icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0Z"/><path d="M12 7v5l3 2"/></svg>
+              </span>
+              <h3>Progress over perfection</h3>
+              <p>Share the messy middle, not just the finish line. Turns out the journey is the inspiring part.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ HOW IT WORKS ============================ -->
+      <section id="how" class="section how" data-section="how">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span> Three steps, zero excuses</p>
+            <h2 class="section-title" data-reveal>From "I wish" to "I did"</h2>
+          </header>
+
+          <ol class="timeline" data-timeline>
+            <li class="timeline__step" data-step style="--c: var(--bt-yellow)">
+              <span class="timeline__num">1</span>
+              <h3>Dream it out loud</h3>
+              <p>Write the goal you keep almost telling people about. Pick a vibe, a photo, a rough date. Done in under a minute.</p>
+            </li>
+            <li class="timeline__step" data-step style="--c: var(--bt-pink)">
+              <span class="timeline__num">2</span>
+              <h3>Chase it with people</h3>
+              <p>Invite the friends who actually mean it. Track progress together, cheer each other on, hold each other gently accountable.</p>
+            </li>
+            <li class="timeline__step" data-step style="--c: var(--bt-purple)">
+              <span class="timeline__num">3</span>
+              <h3>Keep the memory</h3>
+              <p>Complete it and watch it turn into a story on your timeline. Years later, that is the part you will reread.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============================ COMMUNITY SHOWCASE ============================ -->
+      <section id="community" class="section community" data-section="community">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span> Straight from the community</p>
+            <h2 class="section-title" data-reveal>Real lists. Real people. Real receipts.</h2>
+            <p class="section-lead" data-reveal>A peek at what folks are chasing right now. Warning: mildly contagious.</p>
+          </header>
+
+          <div class="showcase-grid">
+            <article class="list-card" data-reveal style="--accent: var(--bt-blue)">
+              <img class="list-card__cover" src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=700&h=400&q=80&fm=webp&fit=crop&crop=entropy" alt="A street in Japan" loading="lazy" decoding="async" />
+              <div class="list-card__body">
+                <span class="pill">Travel</span>
+                <h3>Japan, finally</h3>
+                <p>The trip we keep talking about and never book. This year it gets booked.</p>
+                <div class="list-card__meta">
+                  <img class="avatar avatar--sm" src="https://randomuser.me/api/portraits/men/32.jpg" alt="" width="26" height="26" loading="lazy" decoding="async" />
+                  <span>Kunal</span>
+                  <span class="dot-sep"></span>
+                  <span>212 stars</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="list-card" data-reveal style="--accent: var(--bt-pink)">
+              <img class="list-card__cover" src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=700&h=400&q=80&fm=webp&fit=crop&crop=entropy" alt="Two travelers on an adventure" loading="lazy" decoding="async" />
+              <div class="list-card__body">
+                <span class="pill">Life</span>
+                <h3>Things to do before 30</h3>
+                <p>A countdown that is aging faster than I am. 19 of 30 down.</p>
+                <div class="list-card__meta">
+                  <img class="avatar avatar--sm" src="https://randomuser.me/api/portraits/women/44.jpg" alt="" width="26" height="26" loading="lazy" decoding="async" />
+                  <span>Aria</span>
+                  <span class="dot-sep"></span>
+                  <span>1.8k stars</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="list-card" data-reveal style="--accent: var(--bt-orange)">
+              <img class="list-card__cover" src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=700&h=400&q=80&fm=webp&fit=crop&crop=entropy" alt="A runner training on a track" loading="lazy" decoding="async" />
+              <div class="list-card__body">
+                <span class="pill">Fitness</span>
+                <h3>Couch to first marathon</h3>
+                <p>Documenting every blister so you do not have to. Finished, knees intact.</p>
+                <div class="list-card__meta">
+                  <img class="avatar avatar--sm" src="https://randomuser.me/api/portraits/men/75.jpg" alt="" width="26" height="26" loading="lazy" decoding="async" />
+                  <span>Devon</span>
+                  <span class="dot-sep"></span>
+                  <span>4k stars</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ BENTO GALLERY (signature) ============================ -->
+      <section class="gallery" data-section="gallery">
+        <div class="gallery__pin" data-gallery-pin>
+          <div class="gallery__intro">
+            <h2 class="section-title section-title--light" data-reveal>A life, scrolled back through</h2>
+            <p class="section-lead section-lead--light" data-reveal>
+              Every completed dream lands here. Keep scrolling.
+            </p>
+          </div>
+
+          <div class="bento" data-bento>
+            <figure class="bento__tile bento__tile--1" data-parallax="0.12">
+              <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&h=680&q=80&fm=webp&fit=crop&crop=entropy" alt="A mountain summit at sunrise" loading="lazy" decoding="async" />
+              <figcaption>Sunrise at the summit</figcaption>
+            </figure>
+            <figure class="bento__tile bento__tile--2" data-parallax="-0.08">
+              <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1000&h=360&q=80&fm=webp&fit=crop&crop=entropy" alt="View from an airplane window" loading="lazy" decoding="async" />
+              <figcaption>First solo flight booked</figcaption>
+            </figure>
+            <figure class="bento__tile bento__tile--3" data-parallax="0.18">
+              <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=560&h=820&q=80&fm=webp&fit=crop&crop=entropy" alt="Friends celebrating at a party" loading="lazy" decoding="async" />
+              <figcaption>Surprise party, pulled off</figcaption>
+            </figure>
+            <figure class="bento__tile bento__tile--4" data-parallax="-0.14">
+              <img src="https://images.unsplash.com/photo-1502933691298-84fc14542831?w=560&h=820&q=80&fm=webp&fit=crop&crop=entropy" alt="A surfer riding a wave" loading="lazy" decoding="async" />
+              <figcaption>Learned to surf, badly</figcaption>
+            </figure>
+            <figure class="bento__tile bento__tile--5" data-parallax="0.1">
+              <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1000&h=680&q=80&fm=webp&fit=crop&crop=entropy" alt="An open road through the countryside" loading="lazy" decoding="async" />
+              <figcaption>Road trip, no plan</figcaption>
+            </figure>
+            <figure class="bento__tile bento__tile--6" data-parallax="-0.16">
+              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1000&h=360&q=80&fm=webp&fit=crop&crop=entropy" alt="A team celebrating in an office" loading="lazy" decoding="async" />
+              <figcaption>Said yes to the dream job</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ STATISTICS ============================ -->
+      <section class="section stats" data-section="stats">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat" data-reveal>
+              <span class="stat__num" data-count="1200000" data-suffix="+">0</span>
+              <span class="stat__label">Dreams added</span>
+            </div>
+            <div class="stat" data-reveal>
+              <span class="stat__num" data-count="430000" data-suffix="+">0</span>
+              <span class="stat__label">Goals completed</span>
+            </div>
+            <div class="stat" data-reveal>
+              <span class="stat__num" data-count="92" data-suffix="%">0</span>
+              <span class="stat__label">Come back next week</span>
+            </div>
+            <div class="stat" data-reveal>
+              <span class="stat__num" data-count="186" data-suffix="">0</span>
+              <span class="stat__label">Countries dreaming</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ ACHIEVEMENTS ============================ -->
+      <section class="section achievements" data-section="achievements">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span> Bragging rights, earned</p>
+            <h2 class="section-title" data-reveal>Badges you will actually want</h2>
+          </header>
+
+          <div class="badge-grid">
+            <div class="ach-badge" data-reveal style="--c: var(--bt-yellow)">
+              <span class="ach-badge__ring"></span>
+              <h3>First Dream</h3>
+              <p>You started. That is the hard part.</p>
+            </div>
+            <div class="ach-badge" data-reveal style="--c: var(--bt-pink)">
+              <span class="ach-badge__ring"></span>
+              <h3>Dream Chaser</h3>
+              <p>Ten goals completed. Momentum unlocked.</p>
+            </div>
+            <div class="ach-badge" data-reveal style="--c: var(--bt-blue)">
+              <span class="ach-badge__ring"></span>
+              <h3>Travel Explorer</h3>
+              <p>Five countries, off the list and into the timeline.</p>
+            </div>
+            <div class="ach-badge" data-reveal style="--c: var(--bt-purple)">
+              <span class="ach-badge__ring"></span>
+              <h3>Community Hero</h3>
+              <p>You inspired someone else to start. Quietly powerful.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ TESTIMONIALS ============================ -->
+      <section class="section testimonials" data-section="testimonials">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span> People who stopped waiting</p>
+            <h2 class="section-title" data-reveal>Kind words, lightly humble-bragging</h2>
+          </header>
+        </div>
+
+        <div class="marquee" data-marquee>
+          <div class="marquee__track" data-marquee-track>
+            <figure class="quote" style="--c: var(--bt-pink)"><blockquote>I finally booked the trip I had been "planning" for four years. Turns out a shared list is more motivating than a private one.</blockquote><figcaption><img class="avatar avatar--sm" src="https://randomuser.me/api/portraits/women/65.jpg" alt="" width="26" height="26" loading="lazy" decoding="async" /> Priya, Bengaluru</figcaption></figure>
+            <figure class="quote" style="--c: var(--bt-blue)"><blockquote>My partner and I keep a couple's list now. We have done more in six months than the last three years combined.</blockquote><figcaption><img class="avatar avatar--sm" src="https://randomuser.me/api/portraits/men/52.jpg" alt="" width="26" height="26" loading="lazy" decoding="async" /> Marco, Lisbon</figcaption></figure>
+            <figure class="quote" style="--c: var(--bt-orange)"><blockquote>The memory timeline got me. Scrolling back through a year of actual living instead of screenshots.</blockquote><figcaption><img class="avatar avatar--sm" src="https://randomuser.me/api/portraits/women/31.jpg" alt="" width="26" height="26" loading="lazy" decoding="async" /> Sana, Dubai</figcaption></figure>
+            <figure class="quote" style="--c: var(--bt-purple)"><blockquote>Our friend group has a chaotic shared list and it is the only group chat that produces real plans.</blockquote><figcaption><img class="avatar avatar--sm" src="https://randomuser.me/api/portraits/men/41.jpg" alt="" width="26" height="26" loading="lazy" decoding="async" /> Theo, Berlin</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ FAQ ============================ -->
+      <section id="faq" class="section faq" data-section="faq">
+        <div class="container container--narrow">
+          <header class="section-head section-head--left">
+            <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span> The honest answers</p>
+            <h2 class="section-title" data-reveal>Questions you were about to ask</h2>
+          </header>
+
+          <div class="accordion" data-accordion>
+            <details class="accordion__item" data-reveal>
+              <summary>Is Bucketick free?<span class="accordion__icon" aria-hidden="true"></span></summary>
+              <p>Yes. Everything you need to dream, chase, and remember is free. A premium tier adds AI planning and custom themes later, but the heart of it costs nothing.</p>
+            </details>
+            <details class="accordion__item" data-reveal>
+              <summary>Is this just another to-do app?<span class="accordion__icon" aria-hidden="true"></span></summary>
+              <p>No, and we will gently push back if you call it that. To-do apps are about clearing things. Bucketick is about collecting them, sharing the journey, and keeping the memory once you are done.</p>
+            </details>
+            <details class="accordion__item" data-reveal>
+              <summary>Can I keep some lists private?<span class="accordion__icon" aria-hidden="true"></span></summary>
+              <p>Of course. Every list is private by default. You decide what the world sees and what stays just yours.</p>
+            </details>
+            <details class="accordion__item" data-reveal>
+              <summary>Can I do this with friends?<span class="accordion__icon" aria-hidden="true"></span></summary>
+              <p>That is the best part. Invite people to a shared list, assign nothing, pressure no one, and somehow get more done together than alone.</p>
+            </details>
+            <details class="accordion__item" data-reveal>
+              <summary>When is the app coming?<span class="accordion__icon" aria-hidden="true"></span></summary>
+              <p>Soon, and worth the wait. Drop your details below and you will be among the first in line.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ DOWNLOAD ============================ -->
+      <section id="download" class="section download" data-section="download">
+        <div class="download__bg" aria-hidden="true"></div>
+        <div class="container download__inner">
+          <div class="download__copy">
+            <h2 class="section-title section-title--light" data-reveal>Your someday starts on a Tuesday</h2>
+            <p class="section-lead section-lead--light" data-reveal>
+              Get Bucketick on your phone and add the first dream tonight. Future you is already
+              thanking you, a little smugly.
+            </p>
+            <div class="store-row" data-reveal>
+              <a class="store-btn" href="#" aria-label="Download on the App Store">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M16.5 1.7c0 1.1-.4 2.1-1.2 3-.9 1-2 1.6-3.1 1.5-.1-1.1.4-2.2 1.2-3 .8-.9 2.1-1.5 3.1-1.5ZM20 17.2c-.5 1.2-.8 1.7-1.5 2.8-1 1.5-2.4 3.4-4.1 3.4-1.5 0-1.9-1-4-1-2 0-2.5 1-4 1-1.7 0-3-1.7-4-3.2-2.8-4.3-3.1-9.3-1.4-12 1-1.6 2.7-2.6 4.3-2.6 1.6 0 2.7 1 4 1 1.3 0 2-1 4-1 1.4 0 2.9.8 4 2.1-3.5 1.9-3 6.9.2 8.2Z"/></svg>
+                <span><small>Download on the</small>App Store</span>
+              </a>
+              <a class="store-btn" href="#" aria-label="Get it on Google Play">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M3.6 2.3c-.3.3-.5.7-.5 1.3v16.8c0 .6.2 1 .5 1.3l.1.1L13 12.1v-.2L3.7 2.2l-.1.1Zm12.3 9.8 3-1.7c.9-.5.9-1.3 0-1.8l-3-1.7-2.1 2.1 2.1 2.1-.1.9Zm-2.2-2L4.4 2.1l9.3 8 .1.1Zm0 .2-9.3 8 9.3-7.9v-.1Z"/></svg>
+                <span><small>Get it on</small>Google Play</span>
+              </a>
+            </div>
+          </div>
+
+          <form class="waitlist" data-reveal onsubmit="return false">
+            <label for="wl-email">Not ready to download? Grab a spot on the list.</label>
+            <div class="waitlist__row">
+              <input id="wl-email" class="input" type="email" placeholder="you@example.com" autocomplete="email" />
+              <button class="btn btn--sticker-pink" type="submit">Join the waitlist</button>
+            </div>
+            <small class="waitlist__note">No spam. Just one excited "we're live" email someday soon.</small>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <a class="footer__logo" href="#top" aria-label="Bucketick home">
+            <img class="footer__logo-img" src="/bucketick-logo.png" alt="" width="40" height="40" decoding="async" />
+            <img class="footer__wordmark" src="/bucketick-wordmark.png" alt="Bucketick" height="24" decoding="async" />
+          </a>
+          <p>Dreams deserve to be remembered.</p>
+        </div>
+
+        <nav class="footer__cols" aria-label="Footer">
+          <div>
+            <h4>Product</h4>
+            <a href="#features">Features</a>
+            <a href="#how">How it works</a>
+            <a href="#download">Download</a>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Press</a>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Cookies</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="container footer__langs" aria-label="Languages">
+        <a class="is-active" href="#">English</a>
+        <a href="#">Deutsch</a>
+        <a href="#">Nederlands</a>
+        <a href="#">Português</a>
+        <a href="#">Español</a>
+        <a href="#">Français</a>
+        <a href="#">Italiano</a>
+        <a href="#">Polski</a>
+        <a href="#">Русский</a>
+        <a href="#">Dansk</a>
+        <a href="#">Svenska</a>
+        <a href="#">Türkçe</a>
+        <a href="#">Magyar</a>
+        <a href="#">Română</a>
+        <a href="#">Čeština</a>
+        <a href="#">Bahasa Indonesia</a>
+      </div>
+
+      <div class="container footer__bottom">
+        <p>© 2026 Bucketick. Built for people who keep almost doing the thing.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,295 @@
+/* ===================== Reset & base ===================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--bt-font);
+  color: var(--bt-ink);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  --dot-bg: #fafafa;
+  --dot-color: #d0d0d0;
+  --dot-size: 1.3px;
+  --dot-space: 22px;
+  background:
+    linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+::selection {
+  background: var(--bt-pink);
+  color: var(--bt-white);
+}
+
+/* Honor reduced-motion: kill transforms/animations for sensitive users. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===================== Layout ===================== */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.container--narrow {
+  max-width: 760px;
+}
+
+.section {
+  position: relative;
+  padding-block: clamp(4.5rem, 10vw, 8rem);
+}
+
+/* ===================== Typography ===================== */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: var(--bt-tracking-wide);
+  text-transform: uppercase;
+  color: var(--bt-gray-700);
+}
+
+.eyebrow__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--bt-radius-full);
+  background: var(--bt-gradient-sunrise);
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: var(--bt-tracking-tight);
+  line-height: 1.05;
+  margin-top: 0.9rem;
+}
+
+.section-title--light {
+  color: var(--bt-white);
+}
+
+.section-lead {
+  margin-top: 1rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--bt-gray-700);
+  max-width: 46ch;
+}
+
+.section-lead--light {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.section-head {
+  max-width: 52rem;
+  margin-inline: auto;
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.section-head .section-lead {
+  margin-inline: auto;
+}
+
+.section-head--left {
+  text-align: left;
+  margin-inline: 0;
+}
+
+.section-head--left .section-lead {
+  margin-inline: 0;
+}
+
+.grad-text {
+  background: var(--bt-gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ===================== Buttons ===================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--bt-radius-button);
+  font-weight: 700;
+  font-size: 0.98rem;
+  border: 0;
+  transition:
+    transform var(--bt-dur-fast) var(--bt-ease-spring),
+    box-shadow var(--bt-dur-fast) var(--bt-ease-smooth),
+    background var(--bt-dur-fast) var(--bt-ease-smooth);
+  will-change: transform;
+}
+
+.btn:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+.btn--primary {
+  background: var(--bt-ink);
+  color: var(--bt-white);
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--bt-shadow-md);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--bt-ink);
+}
+
+.btn--ghost:hover {
+  background: var(--bt-gray-100);
+}
+
+/* Playful sticker buttons (hard offset shadow) — landing signature. */
+.btn--sticker-pink {
+  background: var(--bt-pink);
+  color: var(--bt-white);
+  border: 2px solid var(--bt-ink);
+  box-shadow: var(--bt-shadow-sticker);
+  padding: 1rem 1.75rem;
+}
+
+.btn--sticker-pink:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--bt-shadow-sticker-lg);
+}
+
+.btn--sticker-ghost {
+  background: var(--bt-white);
+  color: var(--bt-ink);
+  border: 2px solid var(--bt-ink);
+  box-shadow: var(--bt-shadow-sticker);
+  padding: 1rem 1.75rem;
+}
+
+.btn--sticker-ghost:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--bt-shadow-sticker-lg);
+}
+
+/* ===================== Small primitives ===================== */
+.input {
+  width: 100%;
+  padding: 0.9rem 1.1rem;
+  border-radius: var(--bt-radius-input);
+  border: 2px solid var(--bt-gray-200);
+  background: var(--bt-white);
+  font: inherit;
+  transition: border-color var(--bt-dur-fast) var(--bt-ease-smooth);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--bt-pink);
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--bt-radius-pill);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: var(--bt-tracking-wide);
+  text-transform: uppercase;
+  color: var(--accent, var(--bt-pink));
+  background: color-mix(in srgb, var(--accent, var(--bt-pink)) 14%, white);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--bt-radius-full);
+  background: var(--c, var(--bt-pink));
+  border: 3px solid var(--bt-white);
+  display: inline-block;
+  object-fit: cover;
+}
+
+.avatar--sm {
+  width: 26px;
+  height: 26px;
+  border-width: 2px;
+}
+
+.avatar-stack {
+  display: inline-flex;
+}
+
+.avatar-stack .avatar:not(:first-child) {
+  margin-left: -12px;
+}
+
+.dot-sep {
+  width: 4px;
+  height: 4px;
+  border-radius: var(--bt-radius-full);
+  background: var(--bt-gray-300);
+  display: inline-block;
+}
+
+/* Reveal animation base state (JS adds .is-visible) */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity var(--bt-dur-slow) var(--bt-ease-smooth),
+    transform var(--bt-dur-slow) var(--bt-ease-smooth);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}

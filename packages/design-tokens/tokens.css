@@ -1,0 +1,68 @@
+/**
+ * Bucketick design tokens as CSS custom properties.
+ * Mirror of packages/design-tokens/src/index.ts — keep in lockstep.
+ * Consumed directly by the vanilla landing app.
+ */
+
+:root {
+  /* Brand */
+  --bt-yellow: #ffbb00;
+  --bt-pink: #ff006e;
+  --bt-orange: oklch(0.69 0.25 38.09);
+  --bt-blue: oklch(0.64 0.21 255.09);
+  --bt-purple: #8b3dff;
+
+  /* Soft brand tints */
+  --bt-yellow-soft: #fff4d6;
+  --bt-pink-soft: #ffe0ec;
+  --bt-orange-soft: #ffe6d6;
+  --bt-blue-soft: #dbe8ff;
+  --bt-purple-soft: #efe2ff;
+
+  /* Neutrals */
+  --bt-white: #ffffff;
+  --bt-gray-50: #fafafa;
+  --bt-gray-100: #f4f4f5;
+  --bt-gray-200: #e9e9ec;
+  --bt-gray-300: #d6d6db;
+  --bt-gray-500: #9a9aa3;
+  --bt-gray-700: #52525b;
+  --bt-gray-900: #18181b;
+  --bt-ink: #0f0f12;
+
+  /* Gradients */
+  --bt-gradient-brand: linear-gradient(100deg, #ffbb00 0%, #ff7a00 28%, #ff006e 60%, #8b3dff 100%);
+  --bt-gradient-sunrise: linear-gradient(120deg, #ffbb00 0%, #ff006e 100%);
+  --bt-gradient-dusk: linear-gradient(120deg, #ff006e 0%, #8b3dff 100%);
+  --bt-gradient-sky: linear-gradient(120deg, #ffbb00 0%, #4d8bff 100%);
+
+  /* Radii */
+  --bt-radius-input: 14px;
+  --bt-radius-button: 16px;
+  --bt-radius-card: 24px;
+  --bt-radius-dialog: 24px;
+  --bt-radius-pill: 999px;
+  --bt-radius-full: 9999px;
+
+  /* Shadows */
+  --bt-shadow-sm: 0 1px 2px rgba(24, 24, 27, 0.04), 0 2px 6px rgba(24, 24, 27, 0.05);
+  --bt-shadow-md: 0 4px 10px rgba(24, 24, 27, 0.05), 0 12px 28px rgba(24, 24, 27, 0.07);
+  --bt-shadow-lg: 0 10px 24px rgba(24, 24, 27, 0.06), 0 30px 60px rgba(24, 24, 27, 0.1);
+  --bt-shadow-sticker: 4px 4px 0 rgba(15, 15, 18, 1);
+  --bt-shadow-sticker-lg: 6px 6px 0 rgba(15, 15, 18, 1);
+
+  /* Typography */
+  --bt-font: 'Nunito', system-ui, -apple-system, sans-serif;
+  --bt-font-secondary: 'Manrope', system-ui, -apple-system, sans-serif;
+  --bt-tracking-tight: -0.03em;
+  --bt-tracking-wide: 0.04em;
+
+  /* Motion */
+  --bt-dur-fast: 160ms;
+  --bt-dur-base: 280ms;
+  --bt-dur-slow: 480ms;
+  --bt-dur-cinematic: 900ms;
+  --bt-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --bt-ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --bt-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}

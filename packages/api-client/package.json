@@ -1,0 +1,17 @@
+{
+  "name": "@bucketick/api-client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Typed HTTP client for the Bucketick backend. Stubbed until the API exists.",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": ["src"],
+  "devDependencies": {
+    "@bucketick/tsconfig": "*",
+    "typescript": "^5.8.2"
+  }
+}

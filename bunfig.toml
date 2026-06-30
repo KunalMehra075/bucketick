@@ -1,0 +1,4 @@
+[install]
+# Hoist dependencies to the workspace root so shared tooling resolves cleanly
+# across apps/ and packages/.
+linker = "hoisted"

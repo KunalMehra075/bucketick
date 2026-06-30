@@ -1,0 +1,41 @@
+@import '@bucketick/design-tokens/tokens.css';
+@import '@bucketick/design-tokens/theme.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    font-family: var(--bt-font); /* Nunito for the dashboard */
+    background: var(--bt-bg);
+    color: var(--bt-text);
+    -webkit-font-smoothing: antialiased;
+  }
+  * {
+    border-color: var(--bt-border);
+  }
+  ::selection {
+    background: var(--bt-pink);
+    color: #fff;
+  }
+}
+
+/* Thin, theme-aware scrollbars */
+@layer utilities {
+  .scroll-slim {
+    scrollbar-width: thin;
+    scrollbar-color: var(--bt-border) transparent;
+  }
+  .scroll-slim::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .scroll-slim::-webkit-scrollbar-thumb {
+    background: var(--bt-border);
+    border-radius: 999px;
+  }
+}
