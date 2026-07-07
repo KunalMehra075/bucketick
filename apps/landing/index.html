@@ -3,12 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bucketick — Stop postponing your dreams</title>
+    <title>Bucketick: Shared Bucket List App to Chase Goals Together</title>
     <meta
       name="description"
-      content="Bucketick turns private checklists into living stories. Collect dreams, chase goals together, preserve memories, and inspire a community that actually shows up."
+      content="Bucketick turns private checklists into living stories. Collect dreams, chase goals with friends and partners, preserve memories, and get inspired by a community that actually shows up."
     />
+    <meta
+      name="keywords"
+      content="bucket list app, shared bucket list, goal tracker, couples bucket list, dream list, life goals app, travel bucket list"
+    />
+    <meta name="author" content="Bucketick" />
+    <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#ffbb00" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://bucketick.com/" />
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -19,24 +28,28 @@
     <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Bucketick — Stop postponing your dreams" />
+    <meta property="og:title" content="Bucketick: Stop postponing your dreams" />
     <meta
       property="og:description"
       content="Goals become journeys. Journeys become memories. Memories inspire others. Your life, finally worth scrolling back through."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/og-banner.png" />
+    <meta property="og:url" content="https://bucketick.com/" />
+    <meta property="og:site_name" content="Bucketick" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://bucketick.com/og-banner.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Bucketick, a shared bucket list app for chasing goals together" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Bucketick — Stop postponing your dreams" />
+    <meta name="twitter:title" content="Bucketick: Stop postponing your dreams" />
     <meta
       name="twitter:description"
       content="Goals become journeys. Journeys become memories. Memories inspire others. Your life, finally worth scrolling back through."
     />
-    <meta name="twitter:image" content="/og-banner.png" />
+    <meta name="twitter:image" content="https://bucketick.com/og-banner.png" />
 
     <!-- Fonts: preconnect + display swap to avoid layout shift -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,6 +60,90 @@
     />
 
     <link rel="stylesheet" href="/src/styles/main.css" />
+
+    <!-- Structured data: Organization + WebSite + SoftwareApplication + FAQ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://bucketick.com/#organization",
+            "name": "Bucketick",
+            "url": "https://bucketick.com/",
+            "logo": "https://bucketick.com/bucketick-logo.png",
+            "description": "Bucketick is a shared bucket list app for collecting dreams, chasing goals together, and preserving the memories once you pull them off."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://bucketick.com/#website",
+            "url": "https://bucketick.com/",
+            "name": "Bucketick",
+            "publisher": { "@id": "https://bucketick.com/#organization" },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Bucketick",
+            "applicationCategory": "LifestyleApplication",
+            "operatingSystem": "iOS, Android, Web",
+            "url": "https://bucketick.com/",
+            "description": "Turn private checklists into living stories. Collect dreams, chase goals with friends and partners, and keep every memory in one timeline.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://bucketick.com/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is Bucketick free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Everything you need to dream, chase, and remember is free. A premium tier adds AI planning and custom themes later, but the heart of it costs nothing."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is this just another to-do app?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. To-do apps are about clearing things. Bucketick is about collecting them, sharing the journey, and keeping the memory once you are done."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I keep some lists private?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Of course. Every list is private by default. You decide what the world sees and what stays just yours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I do this with friends?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Invite people to a shared list, track progress together, and get more done as a crew than you would alone."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "When is the app coming?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Soon. Drop your details on the waitlist and you will be among the first in line when it launches."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <!-- ============================ NAV ============================ -->

@@ -1,0 +1,29 @@
+# Cloudflare Pages headers
+# https://developers.cloudflare.com/pages/configuration/headers/
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# Fingerprinted build assets are immutable, cache them hard.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Static images can be cached for a while, but let them refresh daily.
+/*.png
+  Cache-Control: public, max-age=86400
+/*.svg
+  Cache-Control: public, max-age=86400
+/*.ico
+  Cache-Control: public, max-age=86400
+
+# SEO + manifest files: short cache so updates propagate.
+/robots.txt
+  Cache-Control: public, max-age=3600
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+/site.webmanifest
+  Cache-Control: public, max-age=3600
