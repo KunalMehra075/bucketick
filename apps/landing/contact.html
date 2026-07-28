@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Keep preview deployments (*.pages.dev) out of Google; canonical home is bucketick.com.
+      if (location.hostname.endsWith('.pages.dev')) {
+        var m = document.createElement('meta');
+        m.name = 'robots';
+        m.content = 'noindex, nofollow';
+        document.head.appendChild(m);
+      }
+    </script>
     <title>Contact Bucketick: Get in Touch With the Team</title>
     <meta
       name="description"
