@@ -1,4 +1,4 @@
-<p align="center">
+<p align="center" style="background:white;">
   <img src="apps/landing/public/bucketick-wordmark.png" alt="Bucketick" width="300" />
 </p>
 
